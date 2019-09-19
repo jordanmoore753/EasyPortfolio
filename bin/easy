@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'easy_portfolio'
+puts EasyPortfolio.welcome
+EasyPortfolio.create_template_directory
+puts 'I just installed the directory.'

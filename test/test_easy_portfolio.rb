@@ -3,10 +3,6 @@ require 'fileutils'
 require 'easy_portfolio'
 
 class EasyPortfolioTest < Minitest::Test
-  def setup
-
-  end
-
   def remove_project_template
     FileUtils.rm_r 'easy_portfolio_template'
   end
@@ -88,15 +84,39 @@ class EasyPortfolioTest < Minitest::Test
   end
 
   def test_portfolio_all_views_included
+    EasyPortfolio.create_template_directory
 
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/views/"), "layout.erb"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/views/"), "portfolio.erb"
+
+    remove_project_template
+  end
+
+  def test_portfolio_all_tests_included
+    EasyPortfolio.create_template_directory
+
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/test/"), "app_test.rb"
+
+    remove_project_template
   end
 
   def test_portfolio_all_stylesheets_included
+    EasyPortfolio.create_template_directory
 
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/public/stylesheets/"), "style.css"
+
+    remove_project_template
   end
 
   def test_portfolio_all_root_files_included
+    EasyPortfolio.create_template_directory
 
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/"), "app.rb"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/"), "Gemfile"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/"), "config.ru"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template/"), "Procfile"
+
+    remove_project_template
   end
 
 # Version Class

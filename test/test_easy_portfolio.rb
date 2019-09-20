@@ -70,12 +70,21 @@ class EasyPortfolioTest < Minitest::Test
     remove_project_template
   end
 
-  def test_welcome
-    assert_equal "Welcome to EasyPortfolio!", EasyPortfolio.welcome
+  def test_execute_affirmative
+    $stdin = StringIO.new('y')
+    EasyPortfolio.send(:execute)
+
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template"), ".git"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template"), "Gemfile.lock"
+
+    remove_project_template
   end
 
-  def test_portfolio_all_dir_included
+  def test_execute_negative
+    $stdin = StringIO.new('n')
+    EasyPortfolio.send(:execute)
 
+    refute_includes Dir.children(Dir.pwd), "easy_portfolio_template"
   end
 
   def test_portfolio_all_views_included
@@ -90,13 +99,7 @@ class EasyPortfolioTest < Minitest::Test
 
   end
 
-  def test_portfolio_git_init_added
-
-  end
-
-  def test_portfolio_bundle_installed
-
-  end
+# Version Class
 
   def test_version_number_increment
     start_version = Version.return_current_version

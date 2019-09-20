@@ -13,6 +13,10 @@ class Input
     input.downcase == 'y' ? true : false
   end
 
+  def answer_is_yes?(answer)
+    answer == 'y' ? true : false
+  end
+  
   private
 
   def answer_is_yes?(answer)

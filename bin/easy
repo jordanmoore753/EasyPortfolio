@@ -1,8 +1,4 @@
 #!/usr/bin/env ruby
 
 require 'easy_portfolio'
-puts EasyPortfolio.welcome
-EasyPortfolio.create_template_directory
-puts 'I just installed the directory.'
-puts "Now, I will perform the git initialization and bundler actions."
-EasyPortfolio.perform_git_and_bundler_actions
+EasyPortfolio.execute

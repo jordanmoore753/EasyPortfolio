@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'fileutils'
 require 'easy_portfolio'
 
 class EasyPortfolioTest < Minitest::Test
@@ -6,21 +7,71 @@ class EasyPortfolioTest < Minitest::Test
 
   end
 
-  def test_welcome
-    assert_equal "Welcome to EasyPortfolio!", EasyPortfolio.welcome
+  def remove_project_template
+    FileUtils.rm_r 'easy_portfolio_template'
   end
 
-  def test_ask_name
-    assert_equal "This is where I will ask for your project name.", 
-                  Input.ask_name
+  # Input Class
+
+  def test_ask_yes_or_no_affirmative
+    $stdin = StringIO.new('y')
+    assert_equal 'y', Input.new.send(:ask_yes_or_no)
   end
+
+  def test_ask_yes_or_no_negative
+    $stdin = StringIO.new('n')
+    assert_equal 'n', Input.new.send(:ask_yes_or_no)
+  end
+
+  def test_action_verified?
+    action_is_no = Input.new.send(:action_verified?, "n")
+    action_is_yes = Input.new.send(:action_verified?, "y")
+
+    assert_equal true, action_is_yes
+    assert_equal false, action_is_no
+  end
+
+# EasyPortfolio Class and FileAction Module
 
   def test_portfolio_dir_created
-    # EasyPortfolio will copy the folder containing project template from the root of the project
-    # Then, EasyPortfolio will create the same folder in the lib dir (current directory).
     EasyPortfolio.create_template_directory
-    assert_includes Dir.children(Dir.pwd), "pancake"
-    assert_includes Dir.children(Dir.pwd + "/pancake"), "views"
+
+    assert_includes Dir.children(Dir.pwd), "easy_portfolio_template"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template"), "views"
+
+    remove_project_template
+  end
+
+  def test_template_already_exists_in_dir
+    EasyPortfolio.create_template_directory
+
+    bool = EasyPortfolio.template_already_exists?
+
+    assert_equal bool, true
+
+    remove_project_template
+
+    bool = EasyPortfolio.template_already_exists?
+
+    assert_equal bool, false
+  end
+
+  def test_git_bundler_actions_completed
+    EasyPortfolio.create_template_directory
+
+    assert_includes Dir.children(Dir.pwd), "easy_portfolio_template"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template"), "views"
+
+    EasyPortfolio.perform_git_and_bundler_actions
+
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template"), ".git"
+    assert_includes Dir.children(Dir.pwd + "/easy_portfolio_template"), "Gemfile.lock"
+
+    remove_project_template
+  end
+
+  def test_welcome
+    assert_equal "Welcome to EasyPortfolio!", EasyPortfolio.welcome
   end
 
   def test_portfolio_all_dir_included

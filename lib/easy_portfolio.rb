@@ -3,29 +3,29 @@ require_relative 'easy_portfolio/version.rb'
 require 'fileutils'
 require 'find'
 
-module Create
+module FileAction
   def create_template_directory
     directory = File.expand_path("../easy_portfolio/portfolio_template", __FILE__)
-    FileUtils.copy_entry(directory, 'pancake')
+    FileUtils.copy_entry(directory, 'easy_portfolio_template')
+  end
+
+  def template_already_exists?
+    Dir.exist?("easy_portfolio_template")
+  end
+
+  def perform_git_and_bundler_actions
+    Dir.chdir("easy_portfolio_template") do 
+      `git init`
+      `gem install bundler`
+      `bundle install`
+    end
   end
 end
 
 class EasyPortfolio
-  extend Create
+  extend FileAction
 
   def self.welcome
     'Welcome to EasyPortfolio!'
-  end
-
-  def self.all_lib_files
-    files = []
-    path = File.expand_path("")
-    del_pattern = "C:/Users/jorda/Documents/github/EasyPortfolio/"
-
-    Find.find(path) do |pathway|
-      files << pathway.gsub(del_pattern, '') if pathway.include?('.')
-    end
-
-    files
   end
 end

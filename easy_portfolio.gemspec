@@ -9,9 +9,7 @@ Gem::Specification.new do |s|
   s.description = "A portfolio-generator in Sinatra"
   s.authors     = ["Jordan Moore"]
   s.email       = 'jordanmoore753@gmail.com'
-  s.files       = ["lib/easy_portfolio.rb", "lib/easy_portfolio/input.rb", "lib/easy_portfolio/version.rb", 
-                   "lib/easy_portfolio/portfolio_template/app.rb", "lib/easy_portfolio/portfolio_template/views/layout.erb",
-                   "lib/easy_portfolio/portfolio_template/public/style.css"]
+  s.files       = Dir['lib/**/**/**']
   s.homepage    =
     'https://rubygems.org/gems/easy_portfolio'
   s.license       = 'MIT'

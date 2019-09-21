@@ -8,6 +8,8 @@ With **EasyPortfolio**, you can have a working portfolio for your *Ruby* project
 
 Additionally, the tests for the views, HTML, and CSS are all included with the gem's installation.
 
+Here is the link to the RubyGems page: [EasyPortfolio](https://rubygems.org/gems/easy_portfolio)
+
 ## How To Use
 
 Simply install the gem `easy_portfolio` and run the command `easy` from the directory where you would like your project to be stored.
@@ -23,3 +25,9 @@ The things you will need to add to the site are:
 2. Pictures of two of your projects
 3. Resume
 4. Links to your Github, Linkedin, and email address.
+
+## Further Information
+
+If you are having trouble installing or using the gem, send me an email at `jordanmoore753@gmail.com`. For any issues or errors encountered while using the gem you can email the same address.
+
+Thank you for your time and have a great day!

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Your Name Here</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function showHideNav() {
+        var x = document.getElementById("links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav>
+      <h1>Jackson C. Frank</h1>
+      <section id="links">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>        
+      </section>
+      <a href="javascript:void(0);" class="icon" onclick="showHideNav()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </nav>
+    <header>
+      <img src="http://placehold.it/250x250">
+      <h1>Jackson C. Frank</h1>
+      <h2>Software Engineer &#8226; Brooklyn, NY</h2>
+    </header>
+    <main>
+      <section id="about">
+        <h1>About</h1>
+        <p class="about-me">Welcome! I am a software engineer who specializes in Rails, Node, and PostgreSQL. When confronted with a problem, I enjoy diving deep into planning a flexible and powerful solution using TDD and first principles. Check out my recent projects to see these concepts at work.</p>
+      </section>
+      <section id="projects">
+        <div class="project-one">
+          <div class="left">
+              <img src="http://placehold.it/500x500" alt="image of project one">
+            </div>
+            <div class="right">
+              <h1>Project One</h1>
+              <p><strong>Project One</strong> is a cool, and tiny project that can be used for creating interactive projects.</p>
+              <ul>
+                <li class="links"><a href="#">Live</a></li>
+                <li class="links">  &#8226;  </li>
+                <li class="links"><a href="#">Github</a></li>
+              </ul>
+              <h2>Frameworks and Languages</h2>
+              <ul>
+                <li class="langs">Rails</li>
+                <li class="langs">  &#8226;  </li>
+                <li class="langs">React</li>
+                <li class="langs"> &#8226; </li>
+                <li class="langs">PostgreSQL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="project-two">
+          <div class="left">
+              <img src="http://placehold.it/500x500" alt="image of project one">
+          </div>
+          <div class="right">
+              <h1>Project Two</h1>
+              <p><strong>Project Two</strong> is a cool, and tiny project that can be used for creating interactive projects.</p>
+              <ul>
+                <li class="links"><a href="#">Live</a></li>
+                <li class="links">  &#8226;  </li>
+                <li class="links"><a href="#">Github</a></li>
+              </ul>
+              <h2>Frameworks and Languages</h2>
+              <ul>
+                <li class="langs">Rails</li>
+                <li class="langs">  &#8226;  </li>
+                <li class="langs">React</li>
+                <li class="langs"> &#8226; </li>
+                <li class="langs">PostgreSQL</li>
+              </ul>
+            </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h1>Skills</h1>
+        <div class="skills-flex-container">
+          <div class="front-end">
+            <h2 class="fr-h2">Front End</h2>
+              <ul>
+                <li>Javascript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+              </ul>  
+          </div>
+          <div class="back-end">
+            <h2 class="be-h2">Back End</h2>
+              <ul>
+                <li>Rails</li>
+                <li>Ruby</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+              </ul>         
+          </div>
+      </div>
+      </section>
+      <section id="connect">
+        <ul>
+          <li><a href="#">Github</a></li>
+          <li><a href="#">Linkedin</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="mailto:youremailaddress">Email</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Powered by <em>EasyPortfolio</em> &copy; 2019</p>
+    </footer>
+  </body>
+</html>

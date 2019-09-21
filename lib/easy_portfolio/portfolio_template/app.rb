@@ -18,5 +18,8 @@ helpers do
 end
 
 get "/" do 
-
+  # You can include your Ruby code in here.
+  # As of this point, there is no Ruby code in this application.
+  # Wherever you want the code to appear, be sure to use <%= yield %> on that line.
+  erb :layout
 end

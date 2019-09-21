@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.email       = 'jordanmoore753@gmail.com'
   s.files       = Dir['lib/**/**/**']
   s.homepage    =
-    'https://rubygems.org/gems/easy_portfolio'
+    'https://github.com/jordanmoore753/EasyPortfolio'
   s.license       = 'MIT'
 end

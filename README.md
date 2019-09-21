@@ -21,7 +21,7 @@ Of course, feel free to personalize the CSS as much as you'd like.
 The things you will need to add to the site are:
 1. Your picture
 2. Pictures of two of your projects
-3. Resume
+3. Resume and personal information
 4. Links to your Github, Linkedin, and email address.
 
 ## Further Information

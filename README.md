@@ -1,7 +1,7 @@
 # EasyPortfolio
 
-Are you a developer with an outstanding understanding of server-side programming? If so, do you also have a debilitating lack of front-end skills? Furthermore, are you on the job hunt and need a fresh, professional portfolio website to show off your programming skills?
-
+Are you a developer with an outstanding understanding of server-side programming? If so, would you rather not do any front-end programming? Furthermore, are you on the job hunt and need a fresh, professional portfolio website to show off your programming skills?
+ have a debilitating lack of
 If you meet any or all of those requirements, you may be in luck.
 
 With **EasyPortfolio**, you can have a working portfolio for your *Ruby* projects and Resume up in minutes. I took care of the front-end work; the CSS is all mobile-first, with media queries that make viewing on any device possible.

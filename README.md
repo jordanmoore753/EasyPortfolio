@@ -10,7 +10,7 @@ Here is the link to the RubyGems page: [EasyPortfolio](https://rubygems.org/gems
 
 ## How To Use
 
-Simply install the gem `easy_portfolio` and run the command `easy` from the directory where you would like your project to be stored.
+Simply install the gem with the command `gem install easy_portfolio` and run the command `easy` from the directory where you would like your project to be stored.
 
 Upon opening the HTML and CSS you will see that it comes with all of the layouts and styles needed. The Sinatra files are also all set up so if you want to write some Ruby code into your routes you have that flexibility. As it stands now there is no Ruby code in the HTML or CSS. 
 

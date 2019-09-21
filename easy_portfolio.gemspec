@@ -13,4 +13,5 @@ Gem::Specification.new do |s|
   s.homepage    =
     'https://github.com/jordanmoore753/EasyPortfolio'
   s.license       = 'MIT'
+  s.required_ruby_version = '>= 2.5.0'
 end

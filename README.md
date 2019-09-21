@@ -6,8 +6,6 @@ If you meet any or all of those requirements, you may be in luck.
 
 With **EasyPortfolio**, you can have a working portfolio for your *Ruby* projects and Resume up in minutes. I took care of the front-end work; the CSS is all mobile-first, with media queries that make viewing on any device possible.
 
-Additionally, the tests for the views, HTML, and CSS are all included with the gem's installation.
-
 Here is the link to the RubyGems page: [EasyPortfolio](https://rubygems.org/gems/easy_portfolio)
 
 ## How To Use

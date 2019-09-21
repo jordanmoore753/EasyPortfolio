@@ -12,6 +12,14 @@ Additionally, the tests for the views, HTML, and CSS are all included with the g
 
 Simply install the gem `easy_portfolio` and run the command `easy` from the directory where you would like your project to be stored.
 
-Upon opening the HTML and CSS you will see that it comes with all of the layouts and styles needed. All you need to do is include pictures, load some Ruby code, write yourself a small biography, and upload your Resume. 
+Upon opening the HTML and CSS you will see that it comes with all of the layouts and styles needed. The Sinatra files are also all set up so if you want to write some Ruby code into your routes you have that flexibility. As it stands now there is no Ruby code in the HTML or CSS. 
 
-Of course, feel free to personalize the CSS as much as you'd like. But be wary of messing with the structure of the layout, as the tests are set up to ensure that your layout looks great on any device and the smallest change can affect the page's appearance.
+To test your site, just run `bundle exec ruby app.rb` from the root of the project directory.
+
+Of course, feel free to personalize the CSS as much as you'd like.
+
+The things you will need to add to the site are:
+1. Your picture
+2. Pictures of two of your projects
+3. Resume
+4. Links to your Github, Linkedin, and email address.

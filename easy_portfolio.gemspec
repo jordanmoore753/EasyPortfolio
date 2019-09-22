@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = "A portfolio-generator in Sinatra"
   s.authors     = ["Jordan Moore"]
   s.email       = 'jordanmoore753@gmail.com'
-  s.files       = Dir['lib/**/**/**']
+  s.files       = Dir['lib/**/*', 'test/*', '*']
   s.homepage    =
     'https://github.com/jordanmoore753/EasyPortfolio'
   s.license       = 'MIT'
